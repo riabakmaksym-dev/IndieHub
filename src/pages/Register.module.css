@@ -1,0 +1,96 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at center, #ffffff 0%, #edf4ff 100%);
+}
+
+.topBadge {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+  border: 1px solid #e8f0fe;
+  text-align: center;
+}
+
+.subBadge {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #475569;
+  margin-top: 4px;
+}
+
+.submitBtn {
+  margin-top: 8px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.footerText {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.link {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
