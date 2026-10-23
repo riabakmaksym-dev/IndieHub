@@ -1,4 +1,4 @@
-import React from 'react';
+
 import SearchBar from '../components/SearchBar';
 import FilterPanel from '../components/FilterPanel';
 import TeamCard from '../components/TeamCard';
