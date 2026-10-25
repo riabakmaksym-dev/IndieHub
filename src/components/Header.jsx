@@ -1,20 +1,33 @@
 
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.logo}>
+      <Link to="/" className={styles.logo}>
         <span>+</span> IndieHub
-      </a>
+      </Link>
+
       <nav className={styles.nav}>
-        <a href="/" className={styles.link}>Головна</a>
-        <a href="/developers" className={styles.link}>Знайти учасників</a>
-        <a href="/teams" className={styles.link}>Мої команди</a>
+        <Link to="/" className={styles.link}>
+          Головна
+        </Link>
+        <Link to="/developers" className={styles.link}>
+          Знайти учасників
+        </Link>
+        <Link to="/teams" className={styles.link}>
+          Мої команди
+        </Link>
       </nav>
+
       <div className={styles.userBlock}>
-        <a href="/create-team" className={styles.createBtn}>+ Створити команду</a>
-        <div className={styles.avatar}>👤</div>
+        <Link to="/create-team" className={styles.createBtn}>
+          + Створити команду
+        </Link>
+        <Link to="/profile" className={styles.avatar}>
+          👤
+        </Link>
       </div>
     </header>
   );
