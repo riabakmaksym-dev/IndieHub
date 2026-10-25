@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './SearchBar.module.css';
 
 export const SearchBar = ({ placeholder = 'Пошук за назвою команди або грою...' }) => {

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import UserCard from '../components/UserCard';
 import styles from './Developers.module.css';
 

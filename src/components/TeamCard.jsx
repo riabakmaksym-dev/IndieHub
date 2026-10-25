@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './TeamCard.module.css';
 
 export const TeamCard = ({

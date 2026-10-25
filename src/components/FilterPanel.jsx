@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './FilterPanel.module.css';
 
 export const FilterPanel = () => {
