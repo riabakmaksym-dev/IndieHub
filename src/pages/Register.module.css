@@ -94,3 +94,25 @@
   font-weight: 700;
   text-decoration: none;
 }
+.errorAlert {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.termsLabel {
+  font-size: 13px;
+  color: #475569;
+  cursor: pointer;
+}

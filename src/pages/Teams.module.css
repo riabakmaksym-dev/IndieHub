@@ -16,3 +16,12 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
 }
+.statusMessage {
+  color: #64748b;
+  padding: 20px 0;
+}
+
+.errorMessage {
+  color: #ef4444;
+  padding: 20px 0;
+}

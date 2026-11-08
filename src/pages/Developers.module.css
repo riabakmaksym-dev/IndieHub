@@ -54,3 +54,16 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
 }
+.statusMessage {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.errorMessage {
+  text-align: center;
+  padding: 30px;
+  color: #ef4444;
+  font-size: 15px;
+}
