@@ -119,3 +119,37 @@
   font-weight: 700;
   cursor: pointer;
 }
+.errorAlert {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.textareaField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+  resize: vertical;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
