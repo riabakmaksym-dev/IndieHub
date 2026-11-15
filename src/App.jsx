@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
+import { useAuth } from './hooks/useAuth.js';
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
@@ -13,14 +14,25 @@ import CreateTeam from './pages/CreateTeam.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 function App() {
+  const { isAuthenticated } = useAuth();
+
   return (
     <>
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route
+            path="/"
+            element={isAuthenticated ? <Home /> : <Navigate to="/register" replace />}
+          />
+          <Route
+            path="/login"
+            element={isAuthenticated ? <Navigate to="/" replace /> : <Login />}
+          />
+          <Route
+            path="/register"
+            element={isAuthenticated ? <Navigate to="/" replace /> : <Register />}
+          />
           <Route
             path="/profile"
             element={
