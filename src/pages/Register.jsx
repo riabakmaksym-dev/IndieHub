@@ -40,7 +40,7 @@ export const Register = () => {
       setError('');
       setIsLoading(true);
       await register({ username, email, password });
-      navigate('/profile');
+      navigate('/');
     } catch (err) {
       setError(err.message || 'Помилка при реєстрації');
     } finally {

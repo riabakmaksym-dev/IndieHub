@@ -25,7 +25,7 @@ export const Login = () => {
       setError('');
       setIsLoading(true);
       await login(email, password);
-      const from = location.state?.from?.pathname || '/profile';
+      const from = location.state?.from?.pathname || '/';
       navigate(from, { replace: true });
     } catch (err) {
       setError(err.message || 'Невірний email або пароль');
@@ -48,53 +48,56 @@ export const Login = () => {
         {error && <div className={styles.errorAlert}>{error}</div>}
 
         <div className={styles.demoAlert}>
-          💡 Демо-дані: <b>test@example.com</b> / <b>password123</b>
+          <div className={styles.demoTitle}>💡 Тестовий акаунт для перевірки:</div>
+          <div className={styles.demoCredentials}>
+            <div><strong>Email:</strong> test@example.com</div>
+            <div><strong>Пароль:</strong> password123</div>
+          </div>
         </div>
 
         <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.field}>
+          <div className={styles.inputGroup}>
             <label className={styles.label}>Електронна пошта</label>
             <input
               type="email"
-              placeholder="name@example.com"
               className={styles.input}
+              placeholder="name@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
 
-          <div className={styles.field}>
+          <div className={styles.inputGroup}>
             <label className={styles.label}>Пароль</label>
-            <div className={styles.inputWrapper}>
+            <div className={styles.passwordWrapper}>
               <input
                 type={showPassword ? 'text' : 'password'}
-                placeholder="Введіть пароль"
                 className={styles.input}
+                placeholder="Введіть пароль"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <span
-                className={styles.eyeIcon}
+              <button
+                type="button"
+                className={styles.toggleBtn}
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? '🙈' : '👁'}
-              </span>
+                {showPassword ? '🙈' : '👁️'}
+              </button>
             </div>
           </div>
 
           <button type="submit" className={styles.submitBtn} disabled={isLoading}>
-            {isLoading ? 'Вхід...' : 'Увійти ➔'}
+            {isLoading ? 'Авторизація...' : 'Увійти до акаунта ➔'}
           </button>
         </form>
 
         <p className={styles.footerText}>
-          Ще немає акаунта? <Link to="/register" className={styles.link}>Зареєструватися</Link>
+          Не маєте акаунта? <Link to="/register" className={styles.link}>Зареєструватися</Link>
         </p>
       </div>
-
-      <p className={styles.bottomCaption}>Просто почати. Легко продовжувати.</p>
     </div>
   );
 };
